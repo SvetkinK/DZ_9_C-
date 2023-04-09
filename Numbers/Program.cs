@@ -9,7 +9,7 @@ int num = Convert.ToInt32(Console.ReadLine());
 string PrintNumber(int num)
 {
   if(num==1) return Convert.ToString(num);
-  return PrintNumber(num-1) + ", " + num;
+  return num + ", " + PrintNumber(num-1);
 }
 
 Console.WriteLine(PrintNumber(num));
